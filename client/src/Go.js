@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/tiles.css'
-export default function GoTile(props) {
+export default function Go(props) {
    
     let current_player_pos=props.player_pos;
   
