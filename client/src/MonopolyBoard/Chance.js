@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/tiles.css'
+import './../css/tiles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 export default function Chance(props) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/tiles.css'
+import './../css/tiles.css'
 export default function Property(props) {
     
     let color = "color-bar"+" "+props.colorGroup;
@@ -11,12 +11,12 @@ export default function Property(props) {
         bgStyle={backgroundColor:props.player_color};
     }
   return (
-    <div className="HouseTile space property" style={bgStyle}>
-    <div className="container">
+    <div className="property" style={bgStyle}>
+      
         <div className={color}></div>
         <div class="name">{props.propertyName}</div>
         <div class="price">{props.price}</div>
-    </div>
+    
 </div>
   )
 }

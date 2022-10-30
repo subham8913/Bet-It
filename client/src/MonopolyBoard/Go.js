@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/tiles.css'
+import './../css/tiles.css'
 export default function Go(props) {
    
     let current_player_pos=props.player_pos;
@@ -10,7 +10,7 @@ export default function Go(props) {
         bgStyle={backgroundColor:props.player_color};
     }
 return (
-    <div className="space corner go" style={bgStyle}>
+    <div className=" space go" style={bgStyle}>
         <div className="container">
             <div className="instructions">Collect $200.00 salary as you pass</div>
             <div className="go-word">go</div>

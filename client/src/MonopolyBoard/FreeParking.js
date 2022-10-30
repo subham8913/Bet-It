@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/tiles.css'
+import './../css/tiles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar } from '@fortawesome/free-solid-svg-icons'
 export default function FreeParking(props) {
@@ -11,10 +11,10 @@ export default function FreeParking(props) {
         bgStyle={backgroundColor:props.player_color};
     }
 return (
-    <div class="FreeParkingTile container" style={bgStyle}>
+    <div class="free-parking container" style={bgStyle}>
     <div class="name">Free</div>
-    <FontAwesomeIcon className="drawing" icon={faCar} />
-    <i class="drawing fa fa-car"></i>
+    {/* <FontAwesomeIcon className="drawing" icon={faCar} />
+    <i class="drawing fa fa-car"></i> */}
     <div class="name">Parking</div>
 </div>
 
