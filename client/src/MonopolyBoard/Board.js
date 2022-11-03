@@ -57,334 +57,236 @@ export default function Board() {
         {/* <Property propertyName="Prayagraj" tileId={1} colorGroup="green"  price="$150" player_pos={player_pos} player_color={player_color} /> */}
          <div className="top-row">
           <Property
-            propertyName="Prayagraj"
-            tileId={1}
-            colorGroup="red"
-            price="$150"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
             propertyName="Kanpur"
-            tileId={1}
-            colorGroup="red"
-            price="$200"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Patna"
-            tileId={1}
+            tileId={22}
             colorGroup="red"
             price="$250"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+          <Chance propertyName="Chance" tileId={23} player_pos={player_pos} player_color={player_color}/>
           <Property
-            propertyName="Lucknow"
-            tileId={1}
-            colorGroup="yellow"
-            price="$400"
+            propertyName="Prayagraj"
+            tileId={24}
+            colorGroup="red"
+            price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
+          <Property
+            propertyName="Delhi"
+            tileId={25}
+            colorGroup="red"
+            price="$300"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+           <Utility propertyName="Rail" tileId={26} price="$200" player_pos={player_pos} player_color={player_color}/>
+          
+          
           
           <Property
             propertyName="Jaipur"
-            tileId={1}
+            tileId={27}
             colorGroup="yellow"
-            price="$450"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Goa"
-            tileId={1}
-            colorGroup="yellow"
-            price="$500"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Surat"
-            tileId={1}
-            colorGroup="green"
             price="$350"
             player_pos={player_pos}
             player_color={player_color}
           />
           
           <Property
-            propertyName="Delhi"
-            tileId={1}
-            colorGroup="green"
-            price="$400"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Bhopal"
-            tileId={1}
-            colorGroup="green"
+            propertyName="Goa"
+            tileId={28}
+            colorGroup="yellow"
             price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
+          <Utility propertyName="Water" tileId={26} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Property
+            propertyName="Lucknow"
+            tileId={1}
+            colorGroup="yellow"
+            price="$250"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          
+         
           
         </div> 
         <div className="bottom-row">
           <Property
-            propertyName="Prayagraj"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Ranchi"
+            tileId={10}
+            colorGroup="sky-blue"
             price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
           
           <Property
-            propertyName="Kanpur"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Patna"
+            tileId={9}
+            colorGroup="sky-blue"
             price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+           <Chance propertyName="Chance" tileId={23} player_pos={player_pos} player_color={player_color}/>
           <Property
-            propertyName="Patna"
+            propertyName="Guwahati"
             tileId={1}
-            colorGroup="red"
-            price="$250"
+            colorGroup="sky-blue"
+            price="$225"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+          <Utility propertyName="Rail" tileId={6} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Tax propertyName="Income Tax" tileId={38} price="$100" player_pos={player_pos} player_color={player_color}/>
           <Property
-            propertyName="Lucknow"
-            tileId={1}
-            colorGroup="yellow"
-            price="$400"
+            propertyName="Kerala"
+            tileId={4}
+            colorGroup="orange"
+            price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+          {/* <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/> */}
           <Property
-            propertyName="Jaipur"
-            tileId={1}
-            colorGroup="yellow"
-            price="$450"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Goa"
-            tileId={1}
-            colorGroup="yellow"
-            price="$500"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Surat"
-            tileId={1}
-            colorGroup="green"
+            propertyName="Mumbai"
+            tileId={2}
+            colorGroup="orange"
             price="$350"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
-          <Property
-            propertyName="Delhi"
-            tileId={1}
-            colorGroup="green"
-            price="$400"
+           <Property
+            propertyName="Nagpur"
+            tileId={3}
+            colorGroup="orange"
+            price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
           
-          <Property
-            propertyName="Bhopal"
-            tileId={1}
-            colorGroup="green"
-            price="$200"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
+         
           
         </div> 
-        <div className="left-column">
+        <div className="left-column column">
           <Property
-            propertyName="Prayagraj"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Ajmer"
+            tileId={20}
+            colorGroup="orange"
             price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
           
           <Property
-            propertyName="Kanpur"
-            tileId={1}
-            colorGroup="red"
-            price="$200"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Patna"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Surat"
+            tileId={19}
+            colorGroup="orange"
             price="$250"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+          <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/>
           <Property
-            propertyName="Lucknow"
-            tileId={1}
-            colorGroup="yellow"
-            price="$400"
+            propertyName="Kochi"
+            tileId={17}
+            colorGroup="orange"
+            price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
-          
+          <Utility propertyName="Rail" tileId={15} price="$200" player_pos={player_pos} player_color={player_color}/>
           <Property
-            propertyName="Jaipur"
-            tileId={1}
-            colorGroup="yellow"
-            price="$450"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Goa"
-            tileId={1}
-            colorGroup="yellow"
-            price="$500"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Surat"
-            tileId={1}
-            colorGroup="green"
-            price="$350"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Delhi"
-            tileId={1}
-            colorGroup="green"
-            price="$400"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Bhopal"
-            tileId={1}
-            colorGroup="green"
+            propertyName="Mizoram"
+            tileId={15}
+            colorGroup="pink"
             price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
+          
+          <Property
+            propertyName="Agra"
+            tileId={14}
+            colorGroup="pink"
+            price="$250"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          <Utility propertyName="Electricity" tileId={13} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Property
+            propertyName="Indore"
+            tileId={12}
+            colorGroup="pink"
+            price="$200"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          
+          
           
         </div> 
-        <div className="right-column">
+        <div className="right-column column">
           <Property
-            propertyName="Prayagraj"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Jalandhar"
+            tileId={32}
+            colorGroup="green"
             price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
           
           <Property
-            propertyName="Kanpur"
+            propertyName="Gurugram"
+            tileId={33}
+            colorGroup="green"
+            price="$250"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/>
+          <Property
+            propertyName="Srinagar"
             tileId={1}
-            colorGroup="red"
+            colorGroup="green"
+            price="$150"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          <Utility propertyName="Rail" tileId={15} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Property
+            propertyName="Bhopal"
+            tileId={37}
+            colorGroup="dark-blue"
             price="$200"
+            player_pos={player_pos}
+            player_color={player_color}
+          />
+          <Tax propertyName="Luxury Tax" tileId={38} price="$100" player_pos={player_pos} player_color={player_color}/>
+          <Property
+            propertyName="Jhansi"
+            tileId={39}
+            colorGroup="dark-blue"
+            price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
           
           <Property
-            propertyName="Patna"
-            tileId={1}
-            colorGroup="red"
+            propertyName="Pune"
+            tileId={40}
+            colorGroup="dark-blue"
             price="$250"
             player_pos={player_pos}
             player_color={player_color}
           />
           
-          <Property
-            propertyName="Lucknow"
-            tileId={1}
-            colorGroup="yellow"
-            price="$400"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
           
-          <Property
-            propertyName="Jaipur"
-            tileId={1}
-            colorGroup="yellow"
-            price="$450"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Goa"
-            tileId={1}
-            colorGroup="yellow"
-            price="$500"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Surat"
-            tileId={1}
-            colorGroup="green"
-            price="$350"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Delhi"
-            tileId={1}
-            colorGroup="green"
-            price="$400"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
-          
-          <Property
-            propertyName="Bhopal"
-            tileId={1}
-            colorGroup="green"
-            price="$200"
-            player_pos={player_pos}
-            player_color={player_color}
-          />
           
         </div> 
       </div>

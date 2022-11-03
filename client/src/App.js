@@ -3,7 +3,7 @@ import './App.css';
 import Board from './MonopolyBoard/Board';
 
 function App() {
-  // const [backendData,setBackendData]=useState([{}])
+  const [backendData,setBackendData]=useState([{}])
   // useEffect(() => {
   //   fetch(`/api`)
   //    .then((response) => response.json()).then(

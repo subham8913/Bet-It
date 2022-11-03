@@ -11,11 +11,14 @@ export default function GoToJail(props) {
         bgStyle={backgroundColor:props.player_color};
     }
 return (
-    <div class="go-to-jail container" style={bgStyle}>
-        <div class="name">Go To</div>
+    <div className="go-to-jail" style={bgStyle}>
+    <div className="go-to-jail-container">
+    <div className="name">Go To</div>
         <FontAwesomeIcon className="drawing" icon={faGavel} />
-        <i class="drawing fa fa-gavel"></i>
-        <div class="name">Jail</div>
+        <i className="drawing fa fa-gavel"></i>
+        <div className="name">Jail</div>
+    </div>
+       
     </div>
 
 )

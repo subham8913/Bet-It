@@ -11,11 +11,12 @@ export default function FreeParking(props) {
         bgStyle={backgroundColor:props.player_color};
     }
 return (
-    <div class="free-parking container" style={bgStyle}>
-    <div class="name">Free</div>
-    {/* <FontAwesomeIcon className="drawing" icon={faCar} />
-    <i class="drawing fa fa-car"></i> */}
-    <div class="name">Parking</div>
+    <div class="free-parking" style={bgStyle}>
+    <div class="free-parking-container"><div class="free">Free</div>
+    <FontAwesomeIcon className="drawing" icon={faCar} />
+    <i class="drawing fa fa-car"></i>
+    <div class="parking">Parking</div> </div>
+    
 </div>
 
 )

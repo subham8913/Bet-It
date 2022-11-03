@@ -11,11 +11,11 @@ export default function Chance(props) {
         bgStyle={backgroundColor:props.player_color};
     }
   return (
-    <div className="space chance" style={bgStyle}>
-    <div className="container">
+    <div className="chance" style={bgStyle}>
+    
         <div className="name">Chance</div>
         <FontAwesomeIcon className="drawing" icon={faQuestion} />
-    </div>
+   
 </div>
   )
 }

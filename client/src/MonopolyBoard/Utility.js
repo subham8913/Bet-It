@@ -11,12 +11,12 @@ export default function Utility(props) {
         bgStyle={backgroundColor:props.player_color};
     }
   return (
-    <div class="space utility electric-company" style={bgStyle}>
-    <div class="container">
+    <div class="utility" style={bgStyle}>
+    
         <div class="name">{props.propertyName}</div>
         <FontAwesomeIcon className="drawing" icon={faLightbulb}></FontAwesomeIcon>
-        <div class="price">Price: {props.price}</div>
-    </div>
+        <div class="price">{props.price}</div>
+  
 </div>
   )
 }

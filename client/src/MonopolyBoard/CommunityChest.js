@@ -11,12 +11,12 @@ export default function CommunityChest(props) {
         bgStyle={backgroundColor:props.player_color};
     }
   return (
-    <div className="space community-chest" style={bgStyle}>
-    <div className="container">
+    <div className="community-chest" style={bgStyle}>
+    
         <div className="name">Community Chest</div>
         <FontAwesomeIcon className="drawing" icon={faCube} />
         <div className="instructions">Follow instructions on top card</div>
-    </div>
+    
 </div>
   )
 }
