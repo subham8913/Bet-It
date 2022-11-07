@@ -1,5 +1,6 @@
 export default class Player {
     constructor() {
+        this.name='';
         this.balance = 1500;
         this.currentPosition = 0;
         this.properties = [];
