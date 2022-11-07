@@ -69,10 +69,10 @@ class StartGame extends Component {
     render() {
         return (
 
-            <div className="Landing">
+            < div className="startgame">
                 {this.state.readyToRedirect &&  <Navigate to = {{
             pathname: '/play',
-            state: {layersNum: this.state.PlayersNum, playerObjects: this.state.PlayerObjects}
+            state: {playersNum: this.state.PlayersNum, playerObjects: this.state.PlayerObjects}
         }}/>}
                 <div className="Title">
                     <h1> MONOPOLY</h1>

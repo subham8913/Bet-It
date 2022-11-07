@@ -9,14 +9,13 @@ export default class GameZone extends Component {
     constructor(props) {
         super(props);
         console.log("State is: " + this.props.state);
-        // console.log(this.props.state.userObjects);
-        // console.log(this.props.state.userObjects[0]);
+        
         if (typeof this.props.state != "undefined")
-            if (typeof this.props.state.userObjects != "undefined")
+            if (typeof this.props.state.playerObjects != "undefined")
                 this.state = {
                     readyToPlay: true,
-                    userObjects: this.props.state.userObjects,
-                    currentPlayerTurn: this.props.state.userObjects[0],
+                    userObjects: this.props.state.playerObjects,
+                    currentPlayerTurn: this.props.state.playerObjects[0],
                     turnCount: 0
                 };
                 
@@ -34,45 +33,34 @@ export default class GameZone extends Component {
 
     nextPlayerTurn() {
         let currentPlayerTurn = this.state.currentPlayerTurn;
-        let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
-        console.log(indexOfPlayer + " and total players: " + this.state.userObjects.length);
-        let numPlayers = this.state.userObjects.length;
+        let indexOfPlayer = this.state.playerObjects.indexOf(currentPlayerTurn);
+        console.log(indexOfPlayer + " and total players: " + this.state.playerObjects.length);
+        let numPlayers = this.state.playerObjects.length;
         let nextPlayerIndex = null;
         if (indexOfPlayer == numPlayers - 1)
             nextPlayerIndex = 0;
         else  
             nextPlayerIndex = indexOfPlayer + 1;
-            console.log(this.state.userObjects);
-        console.log(this.state.userObjects[nextPlayerIndex]);
-        this.setState({currentPlayerTurn: this.state.userObjects[nextPlayerIndex]});
+            console.log(this.state.playerObjects);
+        console.log(this.state.playerObjects[nextPlayerIndex]);
+        this.setState({currentPlayerTurn: this.state.playerObjects[nextPlayerIndex]});
     }
 
     rollDice(amountRolled) {
         let currentPlayerTurn = this.state.currentPlayerTurn;
-        let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
+        let indexOfPlayer = this.state.playerObjects.indexOf(currentPlayerTurn);
         var stateCopy = Object.assign({},this.state);
         let newPos = currentPlayerTurn.getCurrentPosition() + amountRolled;
         if(newPos>39) {
             currentPlayerTurn.addToBalance(200);
             newPos-=39;
         }
-        stateCopy.userObjects[indexOfPlayer].setCurrentPosition(newPos);
-        stateCopy.userObjects[indexOfPlayer].setRolled(false);
+        stateCopy.playerObjects[indexOfPlayer].setCurrentPosition(newPos);
+        stateCopy.playerObjects[indexOfPlayer].setRolled(false);
         this.setState(stateCopy);
-        console.log(this.state.userObjects);
+        console.log(this.state.playerObjects);
         this.executeTurn(indexOfPlayer);
-        /*console.log("Amount rolled: " + amountRolled);
-        console.log(this.state.currentPlayerTurn);
-        let currentPlayerTurn = this.state.currentPlayerTurn;
-        let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
-        let newPos = this.state.userObjects[indexOfPlayer].getCurrentPosition() + amountRolled;
-        this.state.userObjects[indexOfPlayer].setCurrentPosition(newPos);
-        // currentPlayerTurn: {...st.currentPlayerTurn,  currentPosition: st.currentPlayerTurn.currentPosition + amountRolled},
-        // this.setState(st => ({
-        //     userObjects: users
-        // }));
-        console.log(this.state.currentPlayerTurn);
-        console.log(this.state.userObjects[0]);*/
+      
     }
     executeTurn(indexOfPlayer) {
 
@@ -82,11 +70,11 @@ export default class GameZone extends Component {
     return (
       <div>
            <div>
-                {this.state.readyToPlay == true
+                {this.state.readyToPlay == false
                 ? <Navigate to='/' /> 
                 : <div className='gamezone'>
                 <div className='gamezone-board'> <Board currentPlayer={this.state.currentPlayerTurn} /></div>
-                  <div className='gamezone-infoboard'><InfoBoard userObjects={this.state.userObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} /></div> 
+                  <div className='gamezone-infoboard'><InfoBoard userObjects={this.state.playerObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} /></div> 
                     
                   </div> }
             </div>
