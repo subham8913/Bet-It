@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Board from './MonopolyBoard/Board';
+import { Routes, Route } from 'react-router-dom';
+import StartGame from './Offline/StartGame';
+import OfflineGame from './Offline/GameZone';
+import InfoBoard from './MonopolyBoard/InfoBoard';
+import GameZone from './Offline/GameZone';
+
 
 function App() {
   const [backendData,setBackendData]=useState([{}])
@@ -12,14 +18,10 @@ function App() {
   //     }
   //    )
   //  }, [])
+  
   return (
     <div className="App">
-    <Board/>
-   
-   {/* {backendData.users.map((user,i) => (
-   
-       <p>key={i} {user}</p>
-    ))}  */}
+   <GameZone/>
     </div>
   );
 }
