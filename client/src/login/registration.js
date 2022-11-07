@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Name from "./../images/name.jpg";
+import pass from "./../images/pass.png";
+import Email from "./../images/email.jpg";
 
 function App() {
 	const history = useNavigate();
@@ -31,33 +34,95 @@ function App() {
 	}
 
 	return (
-		<div>
-			<h1>Register</h1>
-			<form onSubmit={registerUser}>
+
+		<div className="main">
+		<div className="sub-main">
+		  <div>
+			
+			<div>
+			  <h1>Register </h1>
+			  
+			  
+			  <div className="first-input">
+				<img src={Name} alt="Name" className="img-all"/>
 				<input
 					value={name}
+					className="name"
 					onChange={(e) => setName(e.target.value)}
 					type="text"
 					placeholder="Name"
 				/>
-				<br />
+				
+			  </div>
+			  <div className="second-input">
+			  
+				<img src={Email} alt="email" className="img-all"/>
+				
 				<input
 					value={email}
+					className="name"
 					onChange={(e) => setEmail(e.target.value)}
 					type="email"
 					placeholder="Email"
 				/>
-				<br />
+			  </div>
+			  
+			  <div className="third-input">
+				<img src={pass} alt="pass" className="img-all"/>
 				<input
 					value={password}
+					className="name"
 					onChange={(e) => setPassword(e.target.value)}
 					type="password"
 					placeholder="Password"
 				/>
-				<br />
-				<input type="submit" value="Register" />
-			</form>
+			  </div>
+			 <div className="login-button">
+			 <button onClick={registerUser}>Register</button>
+			 </div>
+			  
+			   <p className="link">
+				 <a href="#">Forgot password ?</a> Or<a href="#">log in</a>
+			   </p>
+			  
+	
+			</div>
+		  </div>
+		  
+   
 		</div>
+	   </div>
+
+
+
+
+		// <div>
+		// 	<h1>Register</h1>
+		// 	<form onSubmit={registerUser}>
+		// 		<input
+		// 			value={name}
+		// 			onChange={(e) => setName(e.target.value)}
+		// 			type="text"
+		// 			placeholder="Name"
+		// 		/>
+		// 		<br />
+		// 		<input
+		// 			value={email}
+		// 			onChange={(e) => setEmail(e.target.value)}
+		// 			type="email"
+		// 			placeholder="Email"
+		// 		/>
+		// 		<br />
+		// 		<input
+		// 			value={password}
+		// 			onChange={(e) => setPassword(e.target.value)}
+		// 			type="password"
+		// 			placeholder="Password"
+		// 		/>
+		// 		<br />
+		// 		<input type="submit" value="Register" />
+		// 	</form>
+		// </div>
 	);
 }
 
