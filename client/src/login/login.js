@@ -1,4 +1,8 @@
 import { useState } from "react";
+import '../css/login.css';
+import profile from "./../images/a.png";
+import Email from "./../images/email.jpg";
+import pass from "./../images/pass.png";
 
 function App() {
 	const [email, setEmail] = useState("");
@@ -30,26 +34,58 @@ function App() {
 	}
 
 	return (
-		<div>
-			<h1>Login</h1>
-			<form onSubmit={loginUser}>
-				<input
+			<div className="main">
+     <div className="sub-main">
+       <div>
+         <div className="imgs">
+           <div className="container-image">
+             <img src={profile} alt="profile" className="profile"/>
+
+           </div>
+
+
+         </div>
+         <div>
+           <h1>Login </h1>
+		   
+           <div>
+             <img src={Email} alt="email" className="img-all"/>
+			 
+			 <input
 					value={email}
+					className="name"
 					onChange={(e) => setEmail(e.target.value)}
 					type="email"
 					placeholder="Email"
 				/>
-				<br />
-				<input
+           </div>
+           <div className="second-input">
+             <img src={pass} alt="pass" className="img-all"/>
+			 <input
 					value={password}
+					className="name"
 					onChange={(e) => setPassword(e.target.value)}
 					type="password"
 					placeholder="Password"
 				/>
-				<br />
-				<input type="submit" value="Login" />
-			</form>
-		</div>
+           </div>
+          <div className="login-button">
+          <button onClick={loginUser}>Login</button>
+          </div>
+           
+            <p className="link">
+              <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
+            </p>
+           
+ 
+         </div>
+       </div>
+       
+
+     </div>
+    </div>
+		  
+		
 	);
 }
 
