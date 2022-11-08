@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import Board from "../MonopolyBoard/Board";
 import InfoBoard from '../MonopolyBoard/InfoBoard';
 import Player from './Player';
@@ -8,11 +8,27 @@ import { Navigate,useLocation } from 'react-router-dom';
 
 
 export default function GameZone(props) {
-   const location=useLocation();
-   console.log(location); 
+  const location=useLocation();
+  const [players,updatePlayers]=useState(location.state.PlayerObjects);
+  const [currentPlayer,changeCurrentPlayer]=useState(0);
+  const playersNum=location.state.PlayersNum;
+  // console.log(players[0]);
+//  updatePlayers(()=>{
+//   players[0].balance=700;
+//  })
+  // updatePlayers({...players,players[0].balance : 1000})
+  // let tempPlayers=players.slice();
+  // tempPlayers[0].balance=700;
+  // updatePlayers(tempPlayers);
+  // console.log(players);
+  function rollDice(amountRolled){
+         
+   }
+   
   return (
-    <div>
-      
+    <div className='gamezone'>
+       <div className='gamezone-board'> <Board currentPlayer={currentPlayer} /></div>
+                 <div className='gamezone-infoboard'><InfoBoard players={players} rollDice={rollDice} currentPlayer={currentPlayer} playersNum={playersNum} /></div> 
     </div>
   )
 }
@@ -87,8 +103,8 @@ export default function GameZone(props) {
 //                 {this.state.readyToPlay == false
 //                 ? <Navigate to='/' /> 
 //                 : <div className='gamezone'>
-//                 <div className='gamezone-board'> <Board currentPlayer={this.state.currentPlayerTurn} /></div>
-//                   <div className='gamezone-infoboard'><InfoBoard userObjects={this.state.playerObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} /></div> 
+                // <div className='gamezone-board'> <Board currentPlayer={this.state.currentPlayerTurn} /></div>
+                //   <div className='gamezone-infoboard'><InfoBoard userObjects={this.state.playerObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} /></div> 
                     
 //                   </div> }
 //             </div>

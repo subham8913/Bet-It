@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import Player from './Player.js';
 import './../css/StartGame.css'
@@ -14,6 +14,7 @@ export default function StartGame() {
     PlayersNum: 0,
     readyToRedirect: false
    });
+   const [change,setChange]=useState(false);
     // constructor(props) {
     //     super();
     //     playerInfo = {
@@ -28,11 +29,15 @@ export default function StartGame() {
     //     this.handleChange = this.handleChange.bind(this);
     //     this.handleSubmit = this.handleSubmit.bind(this);
     // }
+       
+       
+            const handleChange=(event) =>{
+        
+                setPlayerInfo({...playerInfo,[event.target.name]: event.target.value});
+        
+              };
     
-    const handleChange=(event)=> {
-        setPlayerInfo({...playerInfo,[event.target.name]: event.target.value});
-
-      };
+   
       const navigate=useNavigate();
     const handleSubmit=(event)=> {
         event.preventDefault();
@@ -92,28 +97,28 @@ export default function StartGame() {
                         <div className="Player1">
                             <label>
                                 Player 1 Nickname:
-                                <input type="text" value={playerInfo.player1} onChange={handleChange} name="player1" maxLength="14"></input>
+                                <input type="text"  onChange={handleChange} name="player1" maxLength="14"></input>
                             </label>
                           
                         </div>
                         <div className="Player2">
                             <label>
                                 Player 2 Nickname:
-                                <input type="text" value={playerInfo.player2} onChange={handleChange} name="player2" maxLength="14"></input>
+                                <input type="text"  onChange={handleChange} name="player2" maxLength="14"></input>
                             </label>
                           
                         </div>
                         <div className="Player3">
                             <label>
                                 Player 3 Nickname:
-                                <input type="text" value={playerInfo.player3} onChange={handleChange} name="player3" maxLength="14"></input>
+                                <input type="text"  onChange={handleChange} name="player3" maxLength="14"></input>
                             </label>
                           
                         </div>
                         <div className="Player4">
                             <label>
                                 Player 4 Nickname:
-                                <input type="text" value={playerInfo.player4} onChange={handleChange} name="player4" maxLength="14"></input>
+                                <input type="text"  onChange={handleChange} name="player4" maxLength="14"></input>
                             </label>
                           
                         </div>

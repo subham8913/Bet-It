@@ -1,7 +1,7 @@
 export default class Player {
     constructor() {
         this.name='';
-        this.balance = 1500;
+        this.balance = 100;
         this.currentPosition = 0;
         this.properties = [];
         this.isTurn = false;
@@ -10,7 +10,7 @@ export default class Player {
         this.houseCount = 0;
         this.hotelCount = 0;
         this.hasRolled = false;
-        this.currentPosition = 0;
+       
     }
     getName() {
         return this.name;

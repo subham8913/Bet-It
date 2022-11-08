@@ -102,10 +102,10 @@ export default function Board() {
             player_pos={player_pos}
             player_color={player_color}
           />
-          <Utility propertyName="Water" tileId={26} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Utility propertyName="Water" tileId={29} price="$200" player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Lucknow"
-            tileId={1}
+            tileId={30}
             colorGroup="yellow"
             price="$250"
             player_pos={player_pos}
@@ -118,7 +118,7 @@ export default function Board() {
         <div className="bottom-row">
           <Property
             propertyName="Ranchi"
-            tileId={10}
+            tileId={9}
             colorGroup="sky-blue"
             price="$150"
             player_pos={player_pos}
@@ -127,23 +127,23 @@ export default function Board() {
           
           <Property
             propertyName="Patna"
-            tileId={9}
+            tileId={8}
             colorGroup="sky-blue"
             price="$200"
             player_pos={player_pos}
             player_color={player_color}
           />
-           <Chance propertyName="Chance" tileId={23} player_pos={player_pos} player_color={player_color}/>
+           <Chance propertyName="Chance" tileId={7} player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Guwahati"
-            tileId={1}
+            tileId={6}
             colorGroup="sky-blue"
             price="$225"
             player_pos={player_pos}
             player_color={player_color}
           />
-          <Utility propertyName="Rail" tileId={6} price="$200" player_pos={player_pos} player_color={player_color}/>
-          <Tax propertyName="Income Tax" tileId={38} price="$100" player_pos={player_pos} player_color={player_color}/>
+          {/* <Utility propertyName="Rail" tileId={6} price="$200" player_pos={player_pos} player_color={player_color}/> */}
+          <Tax propertyName="Income Tax" tileId={5} price="$100" player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Kerala"
             tileId={4}
@@ -152,7 +152,7 @@ export default function Board() {
             player_pos={player_pos}
             player_color={player_color}
           />
-          {/* <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/> */}
+          <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Mumbai"
             tileId={2}
@@ -163,7 +163,7 @@ export default function Board() {
           />
            <Property
             propertyName="Nagpur"
-            tileId={3}
+            tileId={1}
             colorGroup="orange"
             price="$150"
             player_pos={player_pos}
@@ -191,7 +191,7 @@ export default function Board() {
             player_pos={player_pos}
             player_color={player_color}
           />
-          <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/>
+          <CommunityChest propertyName="Community Chest" tileId={18} player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Kochi"
             tileId={17}
@@ -200,7 +200,7 @@ export default function Board() {
             player_pos={player_pos}
             player_color={player_color}
           />
-          <Utility propertyName="Rail" tileId={15} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Utility propertyName="Rail" tileId={16} price="$200" player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Mizoram"
             tileId={15}
@@ -249,16 +249,16 @@ export default function Board() {
             player_pos={player_pos}
             player_color={player_color}
           />
-          <CommunityChest propertyName="Community Chest" tileId={3} player_pos={player_pos} player_color={player_color}/>
+          <CommunityChest propertyName="Community Chest" tileId={34} player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Srinagar"
-            tileId={1}
+            tileId={35}
             colorGroup="green"
             price="$150"
             player_pos={player_pos}
             player_color={player_color}
           />
-          <Utility propertyName="Rail" tileId={15} price="$200" player_pos={player_pos} player_color={player_color}/>
+          <Utility propertyName="Rail" tileId={36} price="$200" player_pos={player_pos} player_color={player_color}/>
           <Property
             propertyName="Bhopal"
             tileId={37}
