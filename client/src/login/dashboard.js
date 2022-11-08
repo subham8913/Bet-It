@@ -68,6 +68,7 @@ const Dashboard = () => {
 					value={tempQuote}
 					onChange={(e) => setTempQuote(e.target.value)}
 				/>
+				
 				<input type="submit" value="Update quote" />
 			</form>
 		</div>

@@ -19,36 +19,36 @@
 //   //    )
 //   //  }, [])
   
-  return (
-    <div className="App">
-      <Routes>
-        <Route exact path="/" element={<StartGame/>}/>
-        <Route  path="/play" element={<GameZone/>} />
-      </Routes>
-    </div>
-  );
+//   return (
+//     <div className="App">
+//       <Routes>
+//         <Route exact path="/" element={<StartGame/>}/>
+//         <Route  path="/play" element={<GameZone/>} />
+//       </Routes>
+//     </div>
+//   );
 
 
-// // import { useState, useEffect } from 'react';
-// // import './App.css';
-// // import Board from './MonopolyBoard/Board';
-// import React from "react";
-// import { Routes, Route } from "react-router-dom";
-// import Login from "./login/login";
-// import Register from "./login/registration";
-// import Dashboard from "./login/dashboard";
+// import { useState, useEffect } from 'react';
+// import './App.css';
+// import Board from './MonopolyBoard/Board';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./login/login";
+import Register from "./login/registration";
+import Dashboard from "./login/dashboard";
 
-// const App = () => {
-// 	return (
-// 		<div>
-// 			<Routes>
-// 				<Route exact path="/" element={<Login />} />
-// 				<Route exact path="/register" element={<Register />} />
-// 				<Route exact path="/dashboard" element={<Dashboard />} />
-// 			</Routes>
-// 		</div>
-// 	);
-// };
+const App = () => {
+	return (
+		<div>
+			<Routes>
+				<Route exact path="/" element={<Login />} />
+				<Route exact path="/register" element={<Register />} />
+				<Route exact path="/dashboard" element={<Dashboard />} />
+			</Routes>
+		</div>
+	);
+};
 
 // function App() {
 //   // const [backendData,setBackendData]=useState([{}])
