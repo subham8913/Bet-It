@@ -22,13 +22,26 @@ export default function GameZone(props) {
   // updatePlayers(tempPlayers);
   // console.log(players);
   function rollDice(amountRolled){
-         
+     let tempPlayers=players;
+     let newPosition=players[currentPlayer].currentPostion+amountRolled;
+     if(newPosition>40){
+      tempPlayers[currentPlayer].balance+=200;
+      newPosition-=40;
+     }
+     tempPlayers[currentPlayer].currentPostion=newPosition;
+     tempPlayers[currentPlayer].balance+=20;
+    
+     updatePlayers(tempPlayers);
+     changeCurrentPlayer((currentPlayer+1)%playersNum);
+    //  changeCurrentPlayer((currentPlayer+1)%playersNum);
+     console.log(tempPlayers);
    }
    
   return (
     <div className='gamezone'>
-       <div className='gamezone-board'> <Board currentPlayer={currentPlayer} players={players} /></div>
+       <div className='gamezone-board'> <Board currentPlayer={currentPlayer} players={players} rollDice={rollDice} /></div>
                  <div className='gamezone-infoboard'><InfoBoard players={players} rollDice={rollDice} currentPlayer={currentPlayer} playersNum={playersNum} /></div> 
+    
     </div>
   )
 }

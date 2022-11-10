@@ -14,9 +14,13 @@ export default class InfoBoard extends Component {
     this.props.rollDice(num);
   }
 rollAll() {
-
-    let x=this.reactDice.rollAll();
-    console.log(x);
+  let first_dice = Math.floor((Math.random() *6) + 1);
+  let second_dice = Math.floor((Math.random() *6) + 1);
+    this.reactDice.rollAll([first_dice,second_dice]);
+    this.props.rollDice(first_dice+second_dice);
+    
+   
+    // this.props.rollDice(this.reactDice.rollAll());
    
 }
   render() {

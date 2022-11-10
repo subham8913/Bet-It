@@ -14,7 +14,7 @@ export default function Board(props) {
   // console.log(players);
   const currentPlayer=props.currentPlayer;
   // let players = players[currentPlayer].currentPosition +35;
-        let player_color = players[currentPlayer+1].pieceName;
+        let player_color = "red";
   // let players=[];
   // for(let i=0;i<players.length;i++){
   //   players.push(props.players[i].currentPosition)
