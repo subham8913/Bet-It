@@ -27,7 +27,7 @@ export default function GameZone(props) {
    
   return (
     <div className='gamezone'>
-       <div className='gamezone-board'> <Board currentPlayer={currentPlayer} /></div>
+       <div className='gamezone-board'> <Board currentPlayer={currentPlayer} players={players} /></div>
                  <div className='gamezone-infoboard'><InfoBoard players={players} rollDice={rollDice} currentPlayer={currentPlayer} playersNum={playersNum} /></div> 
     </div>
   )

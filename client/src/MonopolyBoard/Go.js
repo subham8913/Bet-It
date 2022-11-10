@@ -2,12 +2,14 @@ import React from 'react'
 import './../css/tiles.css'
 export default function Go(props) {
    
-    let current_player_pos=props.player_pos;
-  
     let tileId=props.tileId;
     let bgStyle=null;
-    if(current_player_pos===tileId){
-        bgStyle={backgroundColor:props.player_color};
+    let players=props.players;
+    for(let i=0;i<players.length;i++){
+      if(players[i].currentPosition==tileId){
+        bgStyle={backgroundColor:players[i].pieceName};
+        if(players[i].isTurn==true)break;
+      }
     }
 return (
     <div className=" space go" style={bgStyle}>

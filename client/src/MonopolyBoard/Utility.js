@@ -3,19 +3,21 @@ import './../css/tiles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 export default function Utility(props) {
-    let current_player_pos=props.player_pos;
-  
-    let tileId=props.tileId;
-    let bgStyle=null;
-    if(current_player_pos===tileId){
-        bgStyle={backgroundColor:props.player_color};
+  let tileId=props.tileId;
+  let bgStyle=null;
+  let players=props.players;
+  for(let i=0;i<players.length;i++){
+    if(players[i].currentPosition==tileId){
+      bgStyle={backgroundColor:players[i].pieceName};
+      if(players[i].isTurn==true)break;
     }
+  }
   return (
-    <div class="utility" style={bgStyle}>
+    <div className="utility" style={bgStyle}>
     
-        <div class="name">{props.propertyName}</div>
+        <div className="name">{props.propertyName}</div>
         <FontAwesomeIcon className="drawing" icon={faLightbulb}></FontAwesomeIcon>
-        <div class="price">{props.price}</div>
+        <div className="price">{props.price}</div>
   
 </div>
   )

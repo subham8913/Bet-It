@@ -3,13 +3,15 @@ import './../css/tiles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCube } from '@fortawesome/free-solid-svg-icons'
 export default function CommunityChest(props) {
-    let current_player_pos=props.player_pos;
-  
-    let tileId=props.tileId;
-    let bgStyle=null;
-    if(current_player_pos===tileId){
-        bgStyle={backgroundColor:props.player_color};
+  let tileId=props.tileId;
+  let bgStyle=null;
+  let players=props.players;
+  for(let i=0;i<players.length;i++){
+    if(players[i].currentPosition==tileId){
+      bgStyle={backgroundColor:players[i].pieceName};
+      if(players[i].isTurn==true)break;
     }
+  }
   return (
     <div className="community-chest" style={bgStyle}>
     

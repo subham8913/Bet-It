@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
    
   
     /* justify-content: center; */
-    background: #D0E8E8;
+    /* background-color: #D0E8E8; */
 }
 .property .price{
    grid-row-start: 1;
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
    
   
     /* justify-content: center; */
-    background: #D0E8E8;
+    /* background: #D0E8E8; */
 }
 .bottom-row .price{
    grid-row-start: 5;
@@ -383,7 +383,7 @@ flex: 1 1 0;
    
   
     /* justify-content: center; */
-    background: #D0E8E8;
+    /* background: #D0E8E8; */
 }
 .left-column .property .price{
    grid-column-start: 1;
@@ -431,7 +431,7 @@ flex: 1 1 0;
    
   
     /* justify-content: center; */
-    background: #D0E8E8;
+    /* background: #D0E8E8; */
 }
 .right-column .property .price{
    grid-column-start: 5;

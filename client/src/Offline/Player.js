@@ -2,7 +2,7 @@ export default class Player {
     constructor() {
         this.name='';
         this.balance = 100;
-        this.currentPosition = 0;
+        this.currentPosition = 1;
         this.properties = [];
         this.isTurn = false;
         this.isInJail = false;
