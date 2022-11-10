@@ -5,7 +5,7 @@ import pass from "./../images/pass.png";
 import Email from "./../images/email.jpg";
 
 function App() {
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -29,7 +29,7 @@ function App() {
 		const data = await response.json();
 
 		if (data.status === "ok") {
-			history.push("/login");
+			navigate("/");
 		}
 	}
 
@@ -82,7 +82,7 @@ function App() {
 			 </div>
 			  
 			   <p className="link">
-				 <a href="#">Forgot password ?</a> Or<a href="#">log in</a>
+				 <a href="#">Forgot password ?</a> Or<a href="/">log in</a>
 			   </p>
 			  
 	
@@ -93,36 +93,6 @@ function App() {
 		</div>
 	   </div>
 
-
-
-
-		// <div>
-		// 	<h1>Register</h1>
-		// 	<form onSubmit={registerUser}>
-		// 		<input
-		// 			value={name}
-		// 			onChange={(e) => setName(e.target.value)}
-		// 			type="text"
-		// 			placeholder="Name"
-		// 		/>
-		// 		<br />
-		// 		<input
-		// 			value={email}
-		// 			onChange={(e) => setEmail(e.target.value)}
-		// 			type="email"
-		// 			placeholder="Email"
-		// 		/>
-		// 		<br />
-		// 		<input
-		// 			value={password}
-		// 			onChange={(e) => setPassword(e.target.value)}
-		// 			type="password"
-		// 			placeholder="Password"
-		// 		/>
-		// 		<br />
-		// 		<input type="submit" value="Register" />
-		// 	</form>
-		// </div>
 	);
 }
 
