@@ -3,6 +3,12 @@ const app = express();
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
+const login=require("./login");
+
+app.post('/api/register');
+app.post('/api/login');
+app.get('/api/quote');
+app.post('/api/quote');
 
 app.use(cors());
 
