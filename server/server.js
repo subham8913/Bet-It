@@ -7,8 +7,7 @@ const login=require("./login");
 
 app.post('/api/register');
 app.post('/api/login');
-app.get('/api/quote');
-app.post('/api/quote');
+
 
 app.use(cors());
 
